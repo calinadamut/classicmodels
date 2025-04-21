@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="home-page-container">
+    <header class="home-header">
+        <h1>our team and website</h1>
+    </header>
+
+    <main class="home-content">
+        <section class="home-introduction">
+            <p>Learn more about our team and website.</p>
+        </section>
+
+        <section class="home-chapters">
+            <div class="chapter">
+                <h2>Our Team</h2>
+                <p>At the heart of our website is a passionate team of professionals committed to delivering reliable, user-friendly, and meaningful tools for our users. Each member brings a unique background—from software development and database management to UX design and project coordination.</p>
+                <p>What unites us is our shared belief in the power of well-crafted technology to simplify complex tasks and improve workplace efficiency. We collaborate daily, sharing ideas and solving problems together to continually evolve our platform. Transparency, teamwork, and trust guide everything we do.</p>
+            </div>
+            <div class="chapter">
+                <h2>Our Mission</h2>
+                <p>Our mission is to create a modern, efficient, and scalable platform that helps organizations manage their workforce and data effectively. We believe in practical design backed by powerful functionality. Every feature we build is driven by real user needs.</p>
+                <p>Whether it's streamlining employee data, enhancing reporting capabilities, or optimizing database performance, we focus on usability, speed, and clarity. We're constantly improving—listening to feedback, researching best practices, and adapting to new technology trends.</p>
+            </div>
+            <div class="chapter">
+                <h2>Behind the Website</h2>
+                <p>This website was built with modern web technologies including Flask, HTML5, CSS3, and SQL-based databases. We follow a modular architecture that ensures maintainability and scalability, allowing for future expansion and feature integration.</p>
+                <p>Security, responsiveness, and accessibility are top priorities. We keep our codebase clean, structured, and well-documented so it's easy to adapt and evolve. Whether you’re using it on desktop or mobile, we aim to provide a seamless experience that supports your workflow.</p>
+            </div>
+        </section>
+    </main>
+</div>
+
+<!-- Link to the external CSS file -->
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/styles_about.css') }}">
+
+
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Order details</h1>
+
+    <!-- Filters Form -->
+    <form method="get" action="/orderdetails">
+        <label for="orderNumber">Filter by Order Number:</label>
+        <input type="text" id="orderNumber" name="orderNumber" placeholder="filter" value="{{ request.args.get('orderNumber', '') }}">
+
+        <label for="productCode">Filter by Product Code:</label>
+        <input type="text" id="productCode" name="productCode" placeholder="filter" value="{{ request.args.get('productCode', '') }}">
+
+        <button type="submit">Apply Filters</button>
+        <!-- Clear Filters Button -->
+        <a href="/orderdetails" class="clear-filters">Clear Filters</a>
+    </form>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Order Number</th>
+                <th>Product Code</th>
+                <th>Quantity Ordered</th>
+                <th>Price Each</th>
+                <th>Order Line Number</th>                
+            </tr>
+        </thead>
+        <tbody>
+            {% for orderdetail in orderdetails %}
+            <tr>
+                <td>{{ orderdetail['orderNumber'] }}</td>
+                <td>{{ orderdetail['productCode'] }}</td>
+                <td>{{ orderdetail['quantityOrdered'] }}</td>
+                <td>{{ orderdetail['priceEach'] }}</td>
+                <td>{{ orderdetail['orderLineNumber'] }}</td>                
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <br><br>
+{% endblock %}

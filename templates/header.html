@@ -1,0 +1,22 @@
+<!-- header.html -->
+<header>
+    <nav class="navbar">
+        <!--
+        <div class="navbar-logo">
+            <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo" class="logo">
+        </div>
+        -->
+        <ul>
+            <li><a href="/home" {% if request.path == '/home' %}class="active"{% endif %}>Home</a></li>
+            <li><a href="/customers" {% if request.path == '/customers' %}class="active"{% endif %}>Customers</a></li>
+            <li><a href="/employees" {% if request.path == '/employees' %}class="active"{% endif %}>Employees</a></li>
+            <li><a href="/offices" {% if request.path == '/offices' %}class="active"{% endif %}>Offices</a></li>   
+            <li><a href="/orders" {% if request.path == '/orders' %}class="active"{% endif %}>Orders</a></li>
+            <li><a href="/orderdetails" {% if request.path == '/orderdetails' %}class="active"{% endif %}>Order details</a></li>
+            <li><a href="/payments" {% if request.path == '/payments' %}class="active"{% endif %}>Payments</a></li>
+            <li><a href="/productlines" {% if request.path == '/productlines' %}class="active"{% endif %}>Product Lines</a></li>
+            <li><a href="/products" {% if request.path == '/products' %}class="active"{% endif %}>Products</a></li>
+            <li><a href="/about" {% if request.path == '/about' %}class="active"{% endif %}>About</a></li>
+        </ul>
+    </nav>
+</header>

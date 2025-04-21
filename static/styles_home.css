@@ -1,0 +1,96 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and Global Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Home Page Container */
+.home-page-container {
+    width: 100%;
+    padding: 0 20px;
+}
+
+/* Header Styling */
+.home-header {
+    text-align: center;
+    padding: 40px 40px; /* Keep the padding as you had it */
+    margin-top: 40px; /* Adds space above the header, pushing text down */
+    color: white;
+    border-bottom: 2px solid #fd4308;
+}
+
+.home-header h1 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+}
+
+/* Main Content Section */
+.home-content {
+    width: 80%;
+    margin: 40px auto;
+}
+
+/* Introduction Section */
+.home-introduction {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.home-introduction p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    text-align: justify;
+    margin-bottom: 20px;
+    padding-left: 20px;  /* Left padding for text */
+}
+
+/* Chapters Section */
+.home-chapters {
+    margin-bottom: 40px;
+}
+
+.chapter {
+    margin-bottom: 30px;
+}
+
+.chapter h2 {
+    font-size: 2rem;
+    color: #4826ae;
+    margin-bottom: 15px;
+    padding-left: 20px;  /* Left padding for chapter title */
+}
+
+.chapter p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    text-align: justify;
+    padding-left: 20px;  /* Left padding for chapter content */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    /* Adjust Home Content Width */
+    .home-content {
+        width: 90%;
+    }
+
+    /* Adjust Header Title Size */
+    .home-header h1 {
+        font-size: 2rem;
+    }
+
+    /* Adjust Chapter Titles */
+    .chapter h2 {
+        font-size: 1.5rem;
+    }
+}

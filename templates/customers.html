@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <h1>Customers</h1>
+
+    <!-- Filters Form -->
+    <form method="get" action="/customers">
+        <label for="customerNumber">Filter by Customer Number:</label>
+        <input type="text" id="customerNumber" name="customerNumber" placeholder="filter" value="{{ request.args.get('customerNumber', '') }}">
+
+        <label for="customerName">Filter by Customer Name:</label>
+        <input type="text" id="customerName" name="customerName" placeholder="filter" value="{{ request.args.get('customerName', '') }}">
+
+        <button type="submit">Apply Filters</button>
+
+        <!-- Clear Filters Button -->
+        <a href="/customers" class="clear-filters">Clear Filters</a>
+    </form>
+
+    <!-- Customers Table -->
+    <table>
+        <thead>
+            <tr>
+                <th>customerNumber</th>
+                <th>customerName</th>
+                <th>contactLastName</th>
+                <th>contactFirstName</th>
+                <th>phone</th>
+                <th>addressLine1</th>
+                <th>addressLine2</th>
+                <th>city</th>
+                <th>state</th>
+                <th>postalCode</th>
+                <th>country</th>
+                <th>salesRepEmployeeNumber</th>
+                <th>creditLimit</th>
+                <th>action</th>             
+            </tr>
+        </thead>
+        <tbody>
+            {% for customer in customers %}
+            <tr>
+                <td>{{ customer['customerNumber'] }}</td>
+                <td>{{ customer['customerName'] }}</td>
+                <td>{{ customer['contactLastName'] }}</td>
+                <td>{{ customer['contactFirstName'] }}</td>
+                <td>{{ customer['phone'] }}</td>
+                <td>{{ customer['addressLine1'] }}</td>
+                <td>{{ customer['addressLine2'] }}</td>
+                <td>{{ customer['city'] }}</td>
+                <td>{{ customer['state'] }}</td>
+                <td>{{ customer['postalCode'] }}</td>
+                <td>{{ customer['country'] }}</td>
+                <td>{{ customer['salesRepEmployeeNumber'] }}</td>
+                <td>{{ customer['creditLimit'] }}</td>                
+                <td>
+                    <!-- Edit Button: Links to the edit page for that customer -->
+                    <a href="{{ url_for('edit_customer', customer_id=customer['customerNumber']) }}">
+                        <button>Edit</button>
+                    </a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <br><br><br>
+
+{% endblock %}

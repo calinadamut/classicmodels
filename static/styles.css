@@ -1,0 +1,296 @@
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/* Global Font */
+body, h1, table, td, th {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* General Body Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f7f9fc;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.6;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #4826ae;
+    margin-top: 30px;
+}
+
+/* Navigation Bar Styles */
+.navbar {
+    background-color: #fd4308; /* original was #333 */
+    color: white;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex; /* Ensures logo and menu are in the same row */
+    justify-content: center; /* Centers the navbar items horizontally */
+    align-items: center; /* Vertically center the logo and menu items */
+}
+
+.navbar-logo img {
+    height: auto;
+    width: 50px; /* Adjust the size of the logo */
+    margin-right: 15px; /* Space between the logo and the menu items */
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li {
+    margin: 0 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    padding: 8px 15px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar a:hover {
+    background-color: #6452b5;
+    border-radius: 5px;
+}
+
+.navbar a.active {
+    background-color: #4826ae; /* Active link color */
+    border-radius: 5px;
+}
+
+/* Adjust body content to avoid overlap with fixed navbar */
+body {
+    padding-top: 60px; /* Adjust for the height of the navbar */
+}
+
+/* Table Container */
+table {
+    width: 80%;
+    margin: 30px auto;
+    border-collapse: collapse;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Table Styling */
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #4826ae;
+    color: #fff;
+    font-weight: 600;
+}
+
+td {
+    background-color: #fff;
+}
+
+/* Table Row Hover Effect */
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Zebra Striping with Light Green for every second row */
+tr:nth-child(even) {
+    background-color: #d4f7d1 !important; /* Light green color */
+}
+
+/* Table Borders */
+table th, table td {
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+}
+
+table th:first-child, table td:first-child {
+    border-left: none;
+}
+
+table th:last-child, table td:last-child {
+    border-right: none;
+}
+
+/* Filters Form */
+form {
+    text-align: center;
+    margin: 20px 0;
+}
+
+form input {
+    padding: 8px;
+    margin: 5px;
+    font-size: 1rem;
+}
+
+form button {
+    padding: 8px 16px;
+    font-size: 1rem;
+    background-color: #4826ae;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px; /* Add border-radius for consistent appearance */
+}
+
+form button:hover {
+    background-color: #6452b5;
+}
+
+/* Clear Filters Button */
+.clear-filters {
+    /* display: inline-block; */
+    padding: 8px 16px;
+    /* font-size: 1rem; */
+    background-color: #e0e0e0; /* Light grey */
+    color: #333; /* Dark text for contrast */
+    text-decoration: none;
+    border-radius: 4px;
+    /* margin-left: 20px 20px; */
+    /* border: 1px solid #d3d3d3; Light grey border for better visibility */
+}
+
+.clear-filters:hover {
+    background-color: #bdbdbd; /* Slightly darker grey on hover */
+}
+
+/* Footer */
+footer {
+    background-color: #fd4308;
+    color: white;
+    padding: 10px; /* inaltimea footer-ului */
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 4px; /* Set scrollbar width */
+    height: 4px; /* For horizontal scrollbar (optional) */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #4826ae; /* Green color to match footer */
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #f7f9fc; /* Light background for the track */
+}
+
+/* Style for Filter input placeholders */
+input[type="text"]::placeholder {
+    color: #d3d3d3; /* Light grey color for the placeholder text */
+    font-style: italic; /* Optional: Add an italic style to the placeholder text */
+}
+
+.delete-button {
+    background-color: red; /* Red color for Delete button */
+    color: white;
+}
+
+.delete-button:hover {
+    background-color: #c20000; /* Darker red on hover */
+}
+
+.insert-button {
+    background-color: #0d6efd; /* Red color for Delete button */
+    color: white;
+}
+
+.insert-button:hover {
+    background-color: #0b5ed7; /* Darker red on hover */
+}
+
+/* Edit button */
+.edit-button {
+    background-color: #0d6efd; /* Red color for Delete button */
+    color: white;
+}
+
+.edit-button:hover {
+    background-color: #0b5ed7; /* Darker red on hover */
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+    align-items: center;
+}
+
+.update-button {
+    background-color: #28a745;
+    /* padding: 10px 20px; */
+    /* font-size: 1rem; */
+    /* height: 40px; */
+    /* font-weight: 500; */
+    /* border: none; */
+    /* border-radius: 4px; */
+    /* cursor: pointer; */
+}
+
+.update-button:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+.delete-button {
+    /* padding: 10px 20px; */
+    /* font-size: 1rem; */
+    /* height: 40px; */
+    /* font-weight: 500; */
+    /* border: none; */
+    /* border-radius: 4px; */
+    /* cursor: pointer; */
+    background-color: red;
+    color: white;
+}
+
+.delete-button:hover {
+    background-color: #c20000;
+}
+
+.cancel-button {
+    background-color: #0d6efd; /* Red color for Delete button */
+    color: white;
+}
+
+.cancel-button:hover {
+    background-color: #0b5ed7; /* Darker red on hover */
+}

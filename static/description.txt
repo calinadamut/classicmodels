@@ -1,0 +1,7 @@
+Orange rgb(253,67,8) #fd4308:
+    Energy and Innovation:
+        Orange simbolizes creativity, drive and the pursuit of new ideas. It reflects our innovative spirit and ambition to challange the status quo.
+
+Purple rgb(72, 38, 174) #4826ae:
+    Vision and progress:
+        Purple stands for strategic thinking, foresight and the ability to turn innovation into sustainable success.

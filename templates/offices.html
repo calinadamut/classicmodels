@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <h1>Offices</h1>
+
+    <!-- Filters Form -->
+    <form method="get" action="/offices">
+        <label for="city">Filter by City:</label>
+        <input type="text" id="city" name="city" placeholder="city" value="{{ request.args.get('city', '') }}">
+
+        <label for="postalCode">Filter by Postal Code:</label>
+        <input type="text" id="postalCode" name="postalCode" placeholder="postalCode" value="{{ request.args.get('postalCode', '') }}">
+
+        <button type="submit" >Apply Filters</button>
+        
+        <!-- Clear Filters Button -->
+        <a href="/offices" class="clear-filters">Clear Filters</a>
+
+    <!-- Insert Office Button -->
+        <a href="{{ url_for('insert_office') }}">
+            <button type="button" class="insert-button">Insert New Office</button>
+        </a>
+    </form>
+
+    <!-- Offices Table -->
+    <table>
+        <thead>
+            <tr>
+                <th>officeCode</th>
+                <th>city</th>
+                <th>phone</th>
+                <th>addressLine1</th>
+                <th>addressLine2</th>
+                <th>state</th>
+                <th>country</th>
+                <th>postalCode</th>
+                <th>territory</th>
+                <th>action</th>                
+            </tr>
+        </thead>
+        <tbody>
+            {% for office in offices %}
+            <tr>
+                <td>{{ office['officeCode'] }}</td>
+                <td>{{ office['city'] }}</td>
+                <td>{{ office['phone'] }}</td>
+                <td>{{ office['addressLine1'] }}</td>
+                <td>{{ office['addressLine2'] }}</td>
+                <td>{{ office['state'] }}</td>
+                <td>{{ office['country'] }}</td>
+                <td>{{ office['postalCode'] }}</td>
+                <td>{{ office['territory'] }}</td>
+                <td>
+                    <!-- Edit button with link to edit page for this office -->
+                    <form action="{{ url_for('edit_office', office_id=office['officeCode']) }}">
+                        <button type="submit" class="edit-button">
+                            Edit
+                        </button>
+                    </form>
+
+<!--                     <a href="{{ url_for('edit_office', office_id=office['officeCode']) }}">
+                        <button type="submit" class="edit-button">Edit</button>
+                    </a> -->
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}

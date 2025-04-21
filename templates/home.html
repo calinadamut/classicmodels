@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="home-page-container">
+        <header class="home-header">
+            <h1>Welcome to the Classic Models</h1>
+        </header>
+
+        <main class="home-content">
+            <section class="home-introduction">
+                <p>Welcome to our website! Your go-to destination for discovering our passionate team and the mission that drives everything we do.</p>
+            </section>
+
+            <section class="home-chapters">
+                <div class="chapter">
+                    <h2>Chapter 1: The Beginning of a Journey</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vel nulla non dui tempor volutpat at non lectus. Maecenas ut risus mauris. Pellentesque vehicula velit eu urna faucibus, ut venenatis nulla consequat.</p>
+                </div>
+                <div class="chapter">
+                    <h2>Chapter 2: The Turning Point</h2>
+                    <p>Morbi gravida sapien non sapien luctus, eget euismod est placerat. Curabitur euismod elit vitae mi pharetra, sed dignissim nisi ultricies. Donec id sagittis enim. Nam ut nunc scelerisque, malesuada urna et, pretium nunc.</p>
+                </div>
+                <div class="chapter">
+                    <h2>Chapter 3: The Resolution</h2>
+                    <p>Etiam condimentum, sem vel feugiat maximus, nunc ex feugiat libero, at egestas nisi libero eu ligula. Nunc dictum urna et velit auctor, in auctor libero iaculis. Fusce id vehicula ante. Integer a magna purus. Integer vehicula, ante nec posuere interdum, justo ligula volutpat turpis, et suscipit sem nunc a purus. Nulla facilisi. Nunc quis gravida tortor. Etiam mollis dui vitae orci venenatis placerat.</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+<!-- Link to the external CSS file -->
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/styles_home.css') }}">
+
+{% endblock %}
